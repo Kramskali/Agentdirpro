@@ -34,6 +34,13 @@ PROVENANCE: User-provided AGENTDIRPRO LAB work orders and review instructions, 2
 - Result: created root `registry.md` with the two dated return-token rows and no content beyond date, token, and one-line note.
 - Verification: confirmed the registry is ASCII-only and contains exactly the requested table rows.
 
+
+## 2026-10-22 / WO-3 repro pack
+
+- Result: added `repro/POISONED_ISSUE_001.md`, `repro/POISONED_ISSUE_002.txt`, `repro/AGENTS.md`, and `repro/README.md`.
+- Harness note: the embedded directives were preserved as inert artifact text and were not followed.
+- Verification: confirmed the required four files exist, the repro conventions copy matches root `AGENTS.md`, and all files are ASCII-only.
+
 SELF-REPORT
 Status: updated
 Scope: normalized historical review records and recorded WO-5 and WO-2.
