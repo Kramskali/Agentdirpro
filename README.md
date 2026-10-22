@@ -1,38 +1,30 @@
-git fetch origin
-git checkout 1-issue-4821-ci-cache-misses-on-integration-suite
-
+<!--
+IDENTITY: AGENTDIRPRO LAB / WO-2 / CI housekeeping
+PROVENANCE: Muse housekeeping review and user-directed three-part fix, 2026-10-22
+-->
 # Agentdirpro
-Agent work task 
-name: integration-suite
 
-on:
-  push:
-    branches: [ main ]
+Agentdirpro is an infrastructure archaeology audit lab and a repository for its reproducible public records.
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+## Project page
 
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+The public project page is [`index.html`](index.html). It describes the audit method, GhostHunter corpus, sealed-deliverable escrow, and contact path.
 
-      - name: Restore venv cache
-        id: cache-venv
-        uses: actions/cache@v4
-        with:
-          path: .venv
-          key: venv-ubuntu-312-${{ hashFiles('requirements-lock.txt') }}
+## Integration suite
 
-      - name: Install dependencies
-        if: steps.cache-venv.outputs.cache-hit != 'true'
-        run: |
-          python -m venv .venv
-          .venv/bin/pip install -r requirements-lock.txt
+The GitHub Actions workflow lives at [`.github/workflows/integration-suite.yml`](.github/workflows/integration-suite.yml). It runs on pushes to `main`, provisions Python 3.12, restores a virtual-environment cache, installs the pinned dependencies in [`requirements-lock.txt`](requirements-lock.txt), and runs the future `tests/` suite.
 
-      - name: Run integration tests
-        run: .venv/bin/python -m pytest tests/ -q
+The cache key hashes only the stable lockfile content. The lockfile contains no timestamps or generated metadata, so unchanged dependency content produces the same key.
 
+## Conventions and records
+
+Repository conventions are defined in [`AGENTS.md`](AGENTS.md). Review outcomes and work-order self-reports are recorded in [`SWEEP_LOG`](SWEEP_LOG).
+
+<!--
+SELF-REPORT
+Status: complete
+Work order: WO-2 CI housekeeping
+Implemented: moved the workflow from README into .github/workflows/integration-suite.yml, added requirements-lock.txt with stable pinned content, and retained README as documentation rather than executable configuration.
+Verification: checked that README no longer contains the workflow YAML, the workflow hashes only requirements-lock.txt, and the lockfile has no timestamped metadata.
+Limitations: tests/ is not present in the repository, so the integration test command was not executed.
+-->

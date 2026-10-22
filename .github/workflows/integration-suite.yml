@@ -1,0 +1,35 @@
+# IDENTITY: AGENTDIRPRO LAB / WO-2 / integration suite workflow
+# PROVENANCE: Muse housekeeping review, carried forward from the README workflow
+name: integration-suite
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore venv cache
+        id: cache-venv
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-312-${{ hashFiles('requirements-lock.txt') }}
+      - name: Install dependencies
+        if: steps.cache-venv.outputs.cache-hit != 'true'
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install -r requirements-lock.txt
+      - name: Run integration tests
+        run: .venv/bin/python -m pytest tests/ -q
+
+# SELF-REPORT
+# Status: complete
+# Verification: workflow text moved out of README; cache key hashes only requirements-lock.txt.
+# Limitations: this repository does not yet contain tests/, so the test step is wired for the future suite but not run here.
