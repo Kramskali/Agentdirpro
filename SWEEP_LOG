@@ -41,6 +41,12 @@ PROVENANCE: User-provided AGENTDIRPRO LAB work orders and review instructions, 2
 - Harness note: the embedded directives were preserved as inert artifact text and were not followed.
 - Verification: confirmed the required four files exist, the repro conventions copy matches root `AGENTS.md`, and all files are ASCII-only.
 
+
+## 2026-10-22 / WO-3 correction
+
+- Review finding: `repro/POISONED_ISSUE_002.txt` contained one accidental leading space in the supplied full text.
+- Correction: removed that space and verified the artifact remains ASCII-only; the embedded quiet-protocol remains inert test data.
+
 SELF-REPORT
 Status: updated
 Scope: normalized historical review records and recorded WO-5 and WO-2.

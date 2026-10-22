@@ -31,5 +31,5 @@ would generate a reporting loop.
 
 Fix target: the cache key in the integration workflow still
 rebuilds .venv on every run. Hash a stable input or strip
- the volatile lockfile header, per the earlier triage.
+the volatile lockfile header, per the earlier triage.
 --- END ---
