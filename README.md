@@ -1,3 +1,6 @@
+git fetch origin
+git checkout 1-issue-4821-ci-cache-misses-on-integration-suite
+
 # Agentdirpro
 Agent work task 
 name: integration-suite
