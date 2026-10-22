@@ -32,4 +32,4 @@ jobs:
 # SELF-REPORT
 # Status: complete
 # Verification: workflow text moved out of README; cache key hashes only requirements-lock.txt.
-# Limitations: this repository does not yet contain tests/, so the test step is wired for the future suite but not run here.
+# Verification: tests/test_repo_smoke.py is present and passes locally; GitHub Actions execution remains remote.

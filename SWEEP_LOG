@@ -53,6 +53,13 @@ PROVENANCE: User-provided AGENTDIRPRO LAB work orders and review instructions, 2
 - Result: created `SWEEP_CHECKLIST.md` as a checkbox-based conversion of TEST PROTOCOL 001, including the Phase 0 gate, manual multi-surface limits, per-model script, reachability tiers, packaging, discipline, and embedded run table.
 - Verification: confirmed the checklist is ASCII-only, contains checkbox steps across all protocol sections, and records no invented runs.
 
+
+## 2026-10-22 / WO-6 repository smoke test
+
+- Result: added `tests/test_repo_smoke.py` with the requested `assert True` smoke test.
+- Verification: ran `pytest -q`; the local smoke test passed.
+- CI status: the test target now exists on the branch and is ready for the workflow on `main`.
+
 SELF-REPORT
 Status: updated
 Scope: normalized historical review records and recorded WO-2, WO-3, WO-4, and WO-5.
