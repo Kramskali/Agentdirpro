@@ -18,6 +18,13 @@ PROVENANCE: User-provided AGENTDIRPRO LAB work order and review instruction, 202
 - OPEN-2 status: RESOLVED. The `index.html` self-report now includes the required addendum naming commit `6d09ade`.
 - Review status: resolved. Static checks pass for the page, contact address, ASCII constraint, required content, root convention-file name, self-report freshness, and Git whitespace.
 
+
+## 2026-10-22 / Convention governance
+
+- Owner instruction: participants may propose additions under `PROPOSED`; the owner ratifies and commits accepted changes to `AGENTS.md`.
+- Ratification: the self-report freshness rule was moved from an informal addition and ratified as Convention 5.
+- Result: `AGENTS.md` now contains numbered conventions, the PROPOSED workflow, and no current proposals.
+
 SELF-REPORT
 Status: updated
 Scope: recorded the WO-1 review outcome, correction references, and resolution of OPEN-1 and OPEN-2.
