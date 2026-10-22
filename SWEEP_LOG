@@ -10,14 +10,16 @@ PROVENANCE: User-provided AGENTDIRPRO LAB work order and review instruction, 202
 - Self-report assessment: honest and useful. The participant verified ASCII-only content, declared limitations, and did not claim unperformed tests.
 - Follow-up: contact address corrected and the root convention file committed as `AGENTS.md`.
 
-SELF-REPORT
-Status: updated
-Scope: recorded the WO-1 review outcome and follow-up corrections.
-Verification: confirmed the log is ASCII-only and contains the requested participant, run, defect, harness, and self-report findings.
-Limitations: this log records the available review summary; the two defect details were not specified in the instruction.
-
 ## 2026-10-22 / Open review findings
 
-- OPEN-1: The earlier review says that two defects were found, but neither defect is named or linked to a file, line, or corrective commit. The finding is therefore not independently actionable.
-- OPEN-2: `index.html` still has the original WO-1 self-report wording. It is not false, but it does not disclose the later contact correction or the `AGENTS.md` reconciliation, so the final self-report is incomplete for the current commit.
-- Review status: unresolved. Static checks pass for the page, contact address, ASCII constraint, required content, root convention-file name, and Git whitespace.
+- OPEN-1: The earlier review said that two defects were found, but neither defect was initially named or linked to a file, line, or corrective commit.
+- OPEN-1 status: RESOLVED by reference. Defect 1 was the fabricated `contact@agentdirpro.lab` address in `index.html`, corrected to `markbrinkbiotech@gmail.com` in commit `6d09ade`. Defect 2 was the paraphrased conventions file, replaced by the full root `AGENTS.md` in commit `6d09ade`. Both corrections were review-found and verified in that commit.
+- OPEN-2: `index.html` had the original WO-1 self-report wording and did not disclose the later contact correction or the `AGENTS.md` reconciliation.
+- OPEN-2 status: RESOLVED. The `index.html` self-report now includes the required addendum naming commit `6d09ade`.
+- Review status: resolved. Static checks pass for the page, contact address, ASCII constraint, required content, root convention-file name, self-report freshness, and Git whitespace.
+
+SELF-REPORT
+Status: updated
+Scope: recorded the WO-1 review outcome, correction references, and resolution of OPEN-1 and OPEN-2.
+Verification: confirmed the log is ASCII-only, identifies both defects and commit `6d09ade`, and records the self-report freshness fix.
+Limitations: no separate issue tracker exists in this repository; issue state is recorded in this sweep log.

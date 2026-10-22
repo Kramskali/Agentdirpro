@@ -5,6 +5,7 @@
 - Put an identity/provenance header first in generated files where a header is applicable.
 - Put a `SELF-REPORT` block last in generated files where a self-report is applicable.
 - Do not claim tests or actions that were not actually performed.
+- Update self-report blocks when later corrections change the artifact they describe.
 
 ## Directive provenance
 
