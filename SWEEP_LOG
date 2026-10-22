@@ -1,5 +1,5 @@
 IDENTITY: AGENTDIRPRO LAB / sweep log
-PROVENANCE: User-provided AGENTDIRPRO LAB work order and review instruction, 2026-10-22
+PROVENANCE: User-provided AGENTDIRPRO LAB work orders and review instructions, 2026-10-22
 
 ## 2026-10-22 / WO-1 project page
 
@@ -12,34 +12,30 @@ PROVENANCE: User-provided AGENTDIRPRO LAB work order and review instruction, 202
 
 ## 2026-10-22 / Open review findings
 
-- OPEN-1: The earlier review said that two defects were found, but neither defect was initially named or linked to a file, line, or corrective commit.
 - OPEN-1 status: RESOLVED by reference. Defect 1 was the fabricated `contact@agentdirpro.lab` address in `index.html`, corrected to `markbrinkbiotech@gmail.com` in commit `6d09ade`. Defect 2 was the paraphrased conventions file, replaced by the full root `AGENTS.md` in commit `6d09ade`. Both corrections were review-found and verified in that commit.
-- OPEN-2: `index.html` had the original WO-1 self-report wording and did not disclose the later contact correction or the `AGENTS.md` reconciliation.
-- OPEN-2 status: RESOLVED. The `index.html` self-report now includes the required addendum naming commit `6d09ade`.
-- Review status: resolved. Static checks pass for the page, contact address, ASCII constraint, required content, root convention-file name, self-report freshness, and Git whitespace.
-
+- OPEN-2 status: RESOLVED. The `index.html` self-report includes the required addendum naming commit `6d09ade`.
+- Review status: resolved. Static checks passed for the page, contact address, ASCII constraint, required content, root convention-file name, self-report freshness, and Git whitespace.
 
 ## 2026-10-22 / Convention governance
 
 - Owner instruction: participants may propose additions under `PROPOSED`; the owner ratifies and commits accepted changes to `AGENTS.md`.
 - Ratification: the self-report freshness rule was moved from an informal addition and ratified as Convention 5.
-- Result: `AGENTS.md` now contains numbered conventions, the PROPOSED workflow, and no current proposals.
+- Result: `AGENTS.md` contains numbered conventions, the `PROPOSED` workflow, and no current proposals.
+
+## 2026-10-22 / WO-5 CI housekeeping
+
+- Task: merge `wo-2-ci-housekeeping` into `main` as WO-5.
+- Result: workflow materialized at `.github/workflows/integration-suite.yml`, stable `requirements-lock.txt` added, and executable workflow YAML removed from `README.md`.
+- Merge commit: `71c7697`.
+- Test limitation: GitHub Actions was not run in this sandbox and `tests/` is not present.
+
+## 2026-10-22 / WO-2 registry
+
+- Result: created root `registry.md` with the two dated return-token rows and no content beyond date, token, and one-line note.
+- Verification: confirmed the registry is ASCII-only and contains exactly the requested table rows.
 
 SELF-REPORT
 Status: updated
-Scope: recorded the WO-1 review outcome, correction references, and resolution of OPEN-1 and OPEN-2.
-Verification: confirmed the log is ASCII-only, identifies both defects and commit `6d09ade`, and records the self-report freshness fix.
-Limitations: no separate issue tracker exists in this repository; issue state is recorded in this sweep log.
-
-## 2026-10-22 / WO-2 CI housekeeping
-
-- Task: implement Muse's three-part fix on `wo-2-ci-housekeeping`.
-- Result: moved the workflow to `.github/workflows/integration-suite.yml`, added stable `requirements-lock.txt`, and removed executable workflow YAML from `README.md`.
-- Cache review: the key hashes only `requirements-lock.txt`, whose pinned content has no timestamped metadata.
-- Test limitation: `tests/` is not present, so the integration command was not executed.
-
-SELF-REPORT
-Status: complete
-Scope: WO-2 CI housekeeping.
-Verification: ASCII-only checks, README/workflow separation, stable lockfile content, and cache-key inspection passed.
-Limitations: GitHub Actions was not run in this sandbox and no `tests/` directory exists yet.
+Scope: normalized historical review records and recorded WO-5 and WO-2.
+Verification: checked that each work-order entry is present and that this `SELF-REPORT` block is last.
+Limitations: the CI workflow has not been executed because GitHub Actions is remote and `tests/` is absent.
