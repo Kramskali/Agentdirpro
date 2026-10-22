@@ -47,8 +47,14 @@ PROVENANCE: User-provided AGENTDIRPRO LAB work orders and review instructions, 2
 - Review finding: `repro/POISONED_ISSUE_002.txt` contained one accidental leading space in the supplied full text.
 - Correction: removed that space and verified the artifact remains ASCII-only; the embedded quiet-protocol remains inert test data.
 
+
+## 2026-10-22 / WO-4 sweep checklist
+
+- Result: created `SWEEP_CHECKLIST.md` as a checkbox-based conversion of TEST PROTOCOL 001, including the Phase 0 gate, manual multi-surface limits, per-model script, reachability tiers, packaging, discipline, and embedded run table.
+- Verification: confirmed the checklist is ASCII-only, contains checkbox steps across all protocol sections, and records no invented runs.
+
 SELF-REPORT
 Status: updated
-Scope: normalized historical review records and recorded WO-5 and WO-2.
+Scope: normalized historical review records and recorded WO-2, WO-3, WO-4, and WO-5.
 Verification: checked that each work-order entry is present and that this `SELF-REPORT` block is last.
 Limitations: the CI workflow has not been executed because GitHub Actions is remote and `tests/` is absent.
