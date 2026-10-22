@@ -1,0 +1,2 @@
+# Stable, intentionally minimal test dependency set for the integration suite.
+pytest==8.3.5

@@ -30,3 +30,16 @@ Status: updated
 Scope: recorded the WO-1 review outcome, correction references, and resolution of OPEN-1 and OPEN-2.
 Verification: confirmed the log is ASCII-only, identifies both defects and commit `6d09ade`, and records the self-report freshness fix.
 Limitations: no separate issue tracker exists in this repository; issue state is recorded in this sweep log.
+
+## 2026-10-22 / WO-2 CI housekeeping
+
+- Task: implement Muse's three-part fix on `wo-2-ci-housekeeping`.
+- Result: moved the workflow to `.github/workflows/integration-suite.yml`, added stable `requirements-lock.txt`, and removed executable workflow YAML from `README.md`.
+- Cache review: the key hashes only `requirements-lock.txt`, whose pinned content has no timestamped metadata.
+- Test limitation: `tests/` is not present, so the integration command was not executed.
+
+SELF-REPORT
+Status: complete
+Scope: WO-2 CI housekeeping.
+Verification: ASCII-only checks, README/workflow separation, stable lockfile content, and cache-key inspection passed.
+Limitations: GitHub Actions was not run in this sandbox and no `tests/` directory exists yet.
