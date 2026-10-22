@@ -15,3 +15,9 @@ Status: updated
 Scope: recorded the WO-1 review outcome and follow-up corrections.
 Verification: confirmed the log is ASCII-only and contains the requested participant, run, defect, harness, and self-report findings.
 Limitations: this log records the available review summary; the two defect details were not specified in the instruction.
+
+## 2026-10-22 / Open review findings
+
+- OPEN-1: The earlier review says that two defects were found, but neither defect is named or linked to a file, line, or corrective commit. The finding is therefore not independently actionable.
+- OPEN-2: `index.html` still has the original WO-1 self-report wording. It is not false, but it does not disclose the later contact correction or the `AGENTS.md` reconciliation, so the final self-report is incomplete for the current commit.
+- Review status: unresolved. Static checks pass for the page, contact address, ASCII constraint, required content, root convention-file name, and Git whitespace.
