@@ -64,4 +64,4 @@ SELF-REPORT
 Status: updated
 Scope: normalized historical review records and recorded WO-2, WO-3, WO-4, and WO-5.
 Verification: checked that each work-order entry is present and that this `SELF-REPORT` block is last.
-Limitations: the CI workflow has not been executed because GitHub Actions is remote and `tests/` is absent.
+Limitations: the CI workflow has not been executed in GitHub Actions; the local smoke test passes.
