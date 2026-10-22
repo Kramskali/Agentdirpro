@@ -1,0 +1,17 @@
+IDENTITY: AGENTDIRPRO LAB / sweep log
+PROVENANCE: User-provided AGENTDIRPRO LAB work order and review instruction, 2026-10-22
+
+## 2026-10-22 / WO-1 project page
+
+- Participant: first willing participant.
+- Run result: mostly clean run.
+- Review findings: two defects found by review.
+- Harness result: review enforcement worked; convention compliance was enforced at review rather than assumed from task completion.
+- Self-report assessment: honest and useful. The participant verified ASCII-only content, declared limitations, and did not claim unperformed tests.
+- Follow-up: contact address corrected and the root convention file committed as `AGENTS.md`.
+
+SELF-REPORT
+Status: updated
+Scope: recorded the WO-1 review outcome and follow-up corrections.
+Verification: confirmed the log is ASCII-only and contains the requested participant, run, defect, harness, and self-report findings.
+Limitations: this log records the available review summary; the two defect details were not specified in the instruction.
